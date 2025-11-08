@@ -160,13 +160,3 @@
     display: none;
   }
 }
-
-.modal-dialog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto; /* Adjust width as needed */
-  max-width: 500px; /* Set a max width */
-  margin: auto; /* Center horizontally */
-  border: none; /* Optional: remove border */
-}
