@@ -18,6 +18,8 @@
   --breakpoint-xs: 480px;
 
   --background-image-hero-pattern: url("/hero-bg.png");
+
+  --color-movie-release-year-color: #bcbcbc;
 }
 
 @layer base {
@@ -140,6 +142,86 @@
       @apply text-gray-100 font-medium text-base;
     }
   }
+
+  dialog {
+    @apply bg-dark-100 rounded-lg w-[80%] max-w-full fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white;
+
+    & .modal-header {
+      @apply flex justify-between;
+    }
+
+    & .movie-trailer {
+      @apply w-full relative;
+
+      iframe {
+        @apply w-full;
+      }
+
+      & img {
+        @apply w-full max-w-lg h-auto object-contain mx-auto;
+      }
+
+      button {
+        @apply absolute top-3 right-3 cursor-pointer text-white;
+      }
+    }
+
+    &::backdrop {
+      @apply bg-black/75;
+    }
+
+    & .movie-overview {
+      @apply mt-6 text-white font-medium;
+    }
+
+    & .movie-title {
+      @apply text-xl font-bold;
+    }
+
+    & .movie-release-date {
+      @apply text-movie-release-year-color ml-1.5 font-medium;
+    }
+  }
+
+  & .movie-details-container {
+    @apply pl-4 pr-4 flex flex-col;
+  }
+
+  & .movie-cast-details {
+    @apply flex flex-col;
+
+    h4 {
+      @apply mt-6 font-bold text-white;
+    }
+  }
+
+  & .movie-details {
+    @apply flex items-center mt-2;
+
+    & h3 {
+      @apply font-bold;
+    }
+
+    & .movie-rating {
+      @apply inline-flex items-center ml-4;
+    }
+  }
+
+  & .cast-list {
+    @apply flex flex-row gap-4 overflow-x-auto hide-scrollbar mt-4 pb-4;
+
+    & .cast-member {
+      @apply flex flex-col items-center min-w-[100px];
+
+      & img {
+        @apply w-24 h-32 object-cover rounded-lg;
+      }
+
+      & p {
+        @apply mt-2 text-center text-movie-release-year-color font-medium;
+      }
+    }
+  }
 }
 
 @utility text-gradient {
@@ -159,4 +241,16 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+::-webkit-scrollbar {
+  @apply w-2.5;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-light-100/20;
 }

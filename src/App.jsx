@@ -5,6 +5,7 @@ import Spinner from "./components/Spinner";
 import MovieCard from "./components/MovieCard";
 import { useDebounce } from "react-use";
 import { getTrendingMovies, updateSearchCount } from "../appwrite";
+import MovieDetails from "./components/MovieDetails";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
@@ -22,6 +23,8 @@ const App = () => {
   const [movieList, setMovieList] = useState([]);
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  const [selectedMovie, setSelectedMovie] = useState();
 
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
 
@@ -127,12 +130,23 @@ const App = () => {
           ) : (
             <ul>
               {movieList.map((movie) => (
-                <MovieCard key={movie.id} movie={movie} />
+                <MovieCard
+                  key={movie.id}
+                  movie={movie}
+                  setSelectedMovie={setSelectedMovie}
+                />
               ))}
             </ul>
           )}
           {errorMessage && <p className="text-red-500">{errorMessage}</p>}
         </section>
+
+        {selectedMovie && (
+          <MovieDetails
+            id={selectedMovie}
+            setSelectedMovie={setSelectedMovie}
+          ></MovieDetails>
+        )}
       </div>
     </main>
   );

@@ -1,8 +1,19 @@
 const MovieCard = ({
-  movie: { title, vote_average, release_date, poster_path, original_language },
+  movie: {
+    id,
+    title,
+    vote_average,
+    release_date,
+    poster_path,
+    original_language,
+  },
+  setSelectedMovie,
 }) => {
   return (
-    <div className="movie-card cursor-pointer">
+    <div
+      className="movie-card cursor-pointer"
+      onClick={() => setSelectedMovie(id)}
+    >
       <img
         src={
           poster_path
