@@ -29,6 +29,10 @@ This website provides an easy way to view popular movies and quickly find titles
 - Trending: the most popular/trending movies are shown in a separate "Trending Searches" section for quick discovery.
 - Movie Details: Upon clicking the each movie the popup will show up and displays the movie details.
 
+## Live URL
+
+[Movie Media Live Url](https://vairamuthu163.github.io/movie-media/)
+
 ## Screenshots
 
 ![Home Page](public/images/home-screen.png)
