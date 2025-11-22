@@ -1,16 +1,39 @@
-# React + Vite
+## Getting Started
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Requirements:
 
-Currently, two official plugins are available:
+1. node version: 20.11.1
+2. VS code editor
+3. Clone the repository
+4. Ensure db is setup in appwrite to calculate trending movies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Install the dependencies, run:
 
-## React Compiler
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+To start a local development server, run:
 
-## Expanding the ESLint configuration
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Once the server is running, open your browser and navigate to [http://localhost:5173/](http://localhost:5173/). The application will automatically reload whenever you modify any of the source files.
+
+## Movie App
+
+This website provides an easy way to view popular movies and quickly find titles you care about.
+
+- Search: use the search box to look up any movie by title; results update as you type.
+- Trending: the most popular/trending movies are shown in a separate "Trending Searches" section for quick discovery.
+
+## Screenshots
+
+![Home Page](public/images/home-screen.png)
+
+![Trending Section](public/images/trending-movies.png)
+
+![Movies List](public/images/all-movies.png)
+
+![Movie Details](public/images/movie-details.png)
