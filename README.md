@@ -27,6 +27,7 @@ This website provides an easy way to view popular movies and quickly find titles
 
 - Search: use the search box to look up any movie by title; results update as you type.
 - Trending: the most popular/trending movies are shown in a separate "Trending Searches" section for quick discovery.
+- Movie Details: Upon clicking the each movie the popup will show up and displays the movie details.
 
 ## Screenshots
 
